@@ -1,0 +1,276 @@
+/* CSS Animations for Wedding Invitation */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Keyframes for animations */
+@keyframes float1 {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+    opacity: 0.6; 
+  }
+  33% { 
+    transform: translateY(-20px) rotate(120deg); 
+    opacity: 0.8; 
+  }
+  66% { 
+    transform: translateY(10px) rotate(240deg); 
+    opacity: 0.4; 
+  }
+}
+
+@keyframes float2 {
+  0%, 100% { 
+    transform: translateX(0px) rotate(0deg); 
+    opacity: 0.5; 
+  }
+  50% { 
+    transform: translateX(20px) rotate(180deg); 
+    opacity: 0.9; 
+  }
+}
+
+@keyframes float3 {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg); 
+    opacity: 0.7; 
+  }
+  25% { 
+    transform: translateY(-15px) translateX(15px) rotate(90deg); 
+    opacity: 0.9; 
+  }
+  50% { 
+    transform: translateY(0px) translateX(20px) rotate(180deg); 
+    opacity: 0.5; 
+  }
+  75% { 
+    transform: translateY(15px) translateX(15px) rotate(270deg); 
+    opacity: 0.8; 
+  }
+}
+
+@keyframes heartFloat {
+  0% { 
+    transform: translateY(100vh) rotate(0deg); 
+    opacity: 0; 
+  }
+  10% { 
+    opacity: 0.3; 
+  }
+  90% { 
+    opacity: 0.3; 
+  }
+  100% { 
+    transform: translateY(-100px) rotate(360deg); 
+    opacity: 0; 
+  }
+}
+
+/* Shimmer background effect */
+@keyframes shimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Animation for heart emoji */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+/* Glowing orbs animation */
+@keyframes glow {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 0.1; 
+  }
+  25% { 
+    transform: scale(1.1) rotate(90deg); 
+    opacity: 0.15; 
+  }
+  50% { 
+    transform: scale(0.9) rotate(180deg); 
+    opacity: 0.08; 
+  }
+  75% { 
+    transform: scale(1.05) rotate(270deg); 
+    opacity: 0.12; 
+  }
+}
+
+/* Sparkle effect */
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0) rotate(0deg); 
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1) rotate(180deg); 
+  }
+}
+
+/* Base styles */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: #fdf6ec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Opening page styles */
+.opening-hidden {
+  opacity: 0;
+  transform: translateY(-100vh);
+  pointer-events: none;
+}
+
+/* Main content container */
+.main-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive for couple names on mobile */
+@media (max-width: 600px) {
+  .pasangan-row {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .pasangan-row > div {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Desktop styles for larger content */
+@media (min-width: 768px) {
+  .card {
+    max-width: 600px !important;
+    padding: 2rem !important;
+  }
+
+  .main-invitation {
+    max-width: 600px !important;
+    padding: 2.5rem 2rem !important;
+  }
+
+  .time-place-section {
+    max-width: 600px !important;
+    padding: 2.5rem 2rem !important;
+  }
+
+  .gift-section {
+    max-width: 600px !important;
+    padding: 2.5rem 2rem !important;
+  }
+
+  .love-journey-section {
+    max-width: 600px !important;
+    padding: 2.5rem 2rem !important;
+  }
+
+  .line-separator {
+    max-width: 600px !important;
+  }
+
+  .wedding-title {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .and {
+    font-size: 4rem;
+  }
+
+  .name-bottom {
+    font-size: 2.5rem;
+  }
+
+  .greeting-text {
+    font-size: 2.5rem !important;
+  }
+
+  .invitation-text {
+    font-size: 1.3rem !important;
+  }
+
+  .bride-name p:first-child,
+  .groom-name p:first-child {
+    font-size: 2.3rem !important;
+  }
+
+  .bride-name p:last-child,
+  .groom-name p:last-child {
+    font-size: 1.4rem !important;
+  }
+
+  .and-symbol span {
+    font-size: 3.5rem !important;
+  }
+
+  .section-title h2,
+  .gift-title h2,
+  .love-title h2 {
+    font-size: 3.5rem !important;
+  }
+
+  .event-details h2 {
+    font-size: 3rem !important;
+  }
+
+  .bank-account h3,
+  .ewallet-account h3 {
+    font-size: 2.3rem !important;
+  }
+
+  .love-quote {
+    font-size: 1.3rem !important;
+  }
+
+  .footer-message {
+    font-size: 1.3rem !important;
+  }
+
+  .footer-names {
+    font-size: 1.5rem !important;
+  }
+
+  .footer-section > div {
+    max-width: 600px !important;
+  }
+}
+
+/* Prevent overflow during animations */
+section,
+.main-invitation,
+.time-place-section,
+.gift-section,
+.love-journey-section {
+  overflow: hidden;
+}
