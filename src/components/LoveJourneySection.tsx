@@ -27,14 +27,14 @@ const LoveJourneySection: React.FC = () => {
       year: '2023',
     },
     {
-      img: '/asset/dummy_hajid.jpeg',
+      img: '/asset/2024.jpeg',
       title: 'Tumbuh Bersama',
       desc: 'Tahun ini menjadi momentum istimewa ketika Hajid kembali berkunjung, kali ini ditemani keluarga besarnya. Dengan penuh kerendahan hati dan niat yang sungguh-sungguh, mereka datang untuk menyampaikan keinginan melanjutkan hubungan kami ke jenjang yang lebih serius. Sebuah langkah besar yang penuh makna menuju komitmen yang lebih dalam.',
       icon: '🌱',
       year: '2024',
     },
     {
-      img: '/asset/foto_pasangan.jpeg',
+      img: '/asset/2025.jpeg',
       title: 'Menuju Masa Depan',
       desc: 'Di tahun yang penuh berkah ini, Hajid dengan segenap ketulusan hati dan niat suci untuk beribadah bersama, melamar Fauji dalam sebuah momen yang tak akan pernah terlupakan. Dengan doa restu dari kedua keluarga dan ridho Allah SWT, kami siap melangkah bersama menuju babak baru kehidupan sebagai sepasang suami istri yang saling melengkapi.',
       icon: '💍',
