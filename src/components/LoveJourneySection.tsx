@@ -13,30 +13,30 @@ const LoveJourneySection: React.FC = () => {
 
   const journeySteps = [
     {
-      img: '/asset/pertama_ketemu.jpeg',
+      img: '/asset/2022.jpeg',
       title: 'Pertama Bertemu',
-      desc: 'Awal mula perjalanan cinta kami dimulai dari pertemuan sederhana yang tak terduga.',
+      desc: 'Kota Bandung menjadi saksi bisu pertemuan pertama kami yang begitu berkesan. Setelah hampir 6 bulan saling bertukar cerita dan tawa melalui layar, akhirnya takdir mempertemukan kami dalam kehangatan tatap mata pertama. Detik itu, kami tahu bahwa ini adalah awal dari sebuah cerita cinta yang indah.',
       icon: '💌',
-      year: '2021',
+      year: '2022',
     },
     {
-      img: '/asset/dummy_fauji.jpeg',
+      img: '/asset/2023.jpeg',
       title: 'Momen Bersama',
-      desc: 'Kami mulai saling mengenal dan berbagi cerita, suka maupun duka.',
+      desc: 'Langkah pertama Hajid menuju rumah kami penuh dengan harapan dan kebahagiaan. Dengan hati yang berdebar, ia datang untuk pertama kalinya mengenal keluarga besar yang kelak akan menjadi bagian dari hidupnya. Senyuman hangat dan sambutan penuh cinta dari keluarga menjadi bukti bahwa cinta kami mendapat restu dari orang-orang terkasih.',
       icon: '💑',
-      year: '2022',
+      year: '2023',
     },
     {
       img: '/asset/dummy_hajid.jpeg',
       title: 'Tumbuh Bersama',
-      desc: 'Bersama-sama kami belajar, tumbuh, dan saling mendukung satu sama lain.',
+      desc: 'Tahun ini menjadi momentum istimewa ketika Hajid kembali berkunjung, kali ini ditemani keluarga besarnya. Dengan penuh kerendahan hati dan niat yang sungguh-sungguh, mereka datang untuk menyampaikan keinginan melanjutkan hubungan kami ke jenjang yang lebih serius. Sebuah langkah besar yang penuh makna menuju komitmen yang lebih dalam.',
       icon: '🌱',
-      year: '2023',
+      year: '2024',
     },
     {
       img: '/asset/foto_pasangan.jpeg',
       title: 'Menuju Masa Depan',
-      desc: 'Kini kami melangkah bersama, memulai babak baru sebagai pasangan suami istri.',
+      desc: 'Di tahun yang penuh berkah ini, Hajid dengan segenap ketulusan hati dan niat suci untuk beribadah bersama, melamar Fauji dalam sebuah momen yang tak akan pernah terlupakan. Dengan doa restu dari kedua keluarga dan ridho Allah SWT, kami siap melangkah bersama menuju babak baru kehidupan sebagai sepasang suami istri yang saling melengkapi.',
       icon: '💍',
       year: '2025',
     }
@@ -81,6 +81,7 @@ const LoveJourneySection: React.FC = () => {
             start: 'top top',
             end: () => `+=${horizontalScrollLength}`,
             anticipatePin: 1,
+            refreshPriority: -1,
           }
         });
 
@@ -95,7 +96,7 @@ const LoveJourneySection: React.FC = () => {
     const cards = container.querySelectorAll('.journey-card');
     cards.forEach((card) => {
       const cardElement = card as HTMLElement;
-      
+
       cardElement.addEventListener('mouseenter', () => {
         gsap.to(cardElement, {
           y: -10,
@@ -126,10 +127,11 @@ const LoveJourneySection: React.FC = () => {
   }, []);
 
   return (
-    <section 
+    <section
       id="love-journey-section"
       ref={containerRef}
       style={{
+        width: '100%',
         height: '100vh',
         overflow: 'hidden',
         display: 'flex',
@@ -138,183 +140,184 @@ const LoveJourneySection: React.FC = () => {
         position: 'relative'
       }}
     >
-      <div 
-        className="pin-wrap-journey"
-        ref={pinWrapRef}
+      <div
+        className="container"
         style={{
+          width: '100%',
+          maxWidth: window.innerWidth < 768 ? '100%' : '1200px',
+          margin: '0 auto',
+          padding: window.innerWidth < 768 ? '0 0.5rem' : '0 1rem',
           height: '100vh',
           display: 'flex',
           alignItems: 'center',
-          padding: '0 5vw',
-          gap: '2rem',
-          willChange: 'transform'
+          overflow: 'hidden'
         }}
       >
-        {/* Section Title */}
-        <div style={{
-          minWidth: '40vw',
-          padding: '0 2rem',
-          textAlign: 'center',
-          color: '#a57cc5',
-          flexShrink: 0
-        }}>
-          <h2 style={{
-            fontFamily: "'Dancing Script', cursive",
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            fontWeight: '800',
-            marginBottom: '1rem',
-            textShadow: '0 2px 10px rgba(165, 124, 197, 0.3)'
-          }}>
-            Perjalanan Cinta
-          </h2>
+        <div
+          className="pin-wrap-journey"
+          ref={pinWrapRef}
+          style={{
+            width: '100%',
+            height: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            padding: '0',
+            gap: window.innerWidth < 768 ? '1rem' : '2rem',
+            willChange: 'transform'
+          }}
+        >
+          {/* Section Title */}
           <div style={{
-            width: '80px',
-            height: '2px',
-            background: 'linear-gradient(90deg, #a57cc5, #d4b5e0)',
-            margin: '0.5rem auto 2rem auto'
-          }}></div>
-          <p style={{
-            fontSize: '1.2rem',
-            opacity: 0.9,
-            maxWidth: '300px',
-            margin: '0 auto',
-            lineHeight: 1.6,
-            color: '#7c5e99'
+            minWidth: window.innerWidth < 768 ? '250px' : '300px',
+            width: window.innerWidth < 768 ? '250px' : '300px',
+            padding: '0 5rem',
+            textAlign: 'center',
+            color: '#a57cc5',
+            flexShrink: 0
           }}>
-            Momen-momen indah yang membentuk cerita cinta kami
-          </p>
-        </div>
-
-        {/* Journey Cards */}
-        {journeySteps.map((step, index) => (
-          <div
-            key={index}
-            className="journey-card"
-            style={{
-              minWidth: '350px',
-              width: '350px',
-              height: '500px',
-              borderRadius: '1.5rem',
-              overflow: 'visible',
-              position: 'relative',
-              boxShadow: '0 10px 30px rgba(165, 124, 197, 0.3)',
-              cursor: 'pointer',
-              background: 'rgba(255, 255, 255, 0.95)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(165, 124, 197, 0.2)',
-              flexShrink: 0
-            }}
-          >
-            {/* Badge tahun bentuk awan putih, teks ungu */}
-            <div style={{
-              position: 'absolute',
-              top: '-28px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              zIndex: 10,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '38px',
-              width: '70px',
+            <h2 style={{
+              fontFamily: "'Dancing Script', cursive",
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: '800',
+              marginBottom: '1rem',
+              textShadow: '0 2px 10px rgba(165, 124, 197, 0.3)'
             }}>
-              <svg width="70" height="38" viewBox="0 0 70 38" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', left: 0, top: 0 }}>
-                <ellipse cx="22" cy="22" rx="18" ry="13" fill="#fff" />
-                <ellipse cx="40" cy="18" rx="14" ry="10" fill="#fff" />
-                <ellipse cx="55" cy="25" rx="9" ry="7" fill="#fff" />
-                <circle cx="32" cy="28" r="7" fill="#fff" />
-                <circle cx="50" cy="13" r="6" fill="#fff" />
-                <ellipse cx="60" cy="30" rx="6" ry="4" fill="#fff" />
-              </svg>
-              <span style={{
-                position: 'relative',
-                color: '#a57cc5',
-                fontWeight: 700,
-                fontSize: '1.08rem',
-                padding: '2px 18px',
-                zIndex: 2,
-                fontFamily: 'sans-serif',
-                letterSpacing: '1px',
-              }}>{step.year}</span>
-            </div>
-
-            <div style={{ position: 'relative', height: '60%', margin: '2rem 1rem 0 1rem' }}>
-              <img
-                src={step.img}
-                alt={step.title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '1rem',
-                  boxShadow: '0 4px 16px rgba(165, 124, 197, 0.16)'
-                }}
-              />
-            </div>
-
+              Perjalanan Cinta
+            </h2>
             <div style={{
-              padding: '1.5rem',
-              height: '40%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              textAlign: 'center'
-            }}>
-              <h3 style={{
-                fontSize: '1.3rem',
-                fontWeight: '600',
-                color: '#a57cc5',
-                marginBottom: '0.5rem'
-              }}>
-                {step.title}
-              </h3>
-              <p style={{
-                fontSize: '0.9rem',
-                color: '#7c5e99',
-                lineHeight: 1.4
-              }}>
-                {step.desc}
-              </p>
-            </div>
-          </div>
-        ))}
-
-        {/* Quote section */}
-        <div style={{
-          minWidth: '40vw',
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#a57cc5',
-          flexShrink: 0,
-          textAlign: 'center'
-        }}>
-          <div style={{
-            maxWidth: '350px',
-            background: 'rgba(165, 124, 197, 0.1)',
-            borderRadius: '1.5rem',
-            padding: '2rem',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(165, 124, 197, 0.2)',
-            boxShadow: '0 10px 30px rgba(165, 124, 197, 0.2)'
-          }}>
-            <div style={{
-              fontSize: '3rem',
-              marginBottom: '1rem'
-            }}>
-              💕
-            </div>
+              width: '80px',
+              height: '2px',
+              background: 'linear-gradient(90deg, #a57cc5, #d4b5e0)',
+              margin: '0.5rem auto 2rem auto'
+            }}></div>
             <p style={{
-              fontSize: '1.1rem',
-              fontStyle: 'italic',
+              fontSize: '1.2rem',
+              opacity: 0.9,
+              maxWidth: '300px',
+              margin: '0 auto',
               lineHeight: 1.6,
-              color: '#a57cc5'
+              color: '#7c5e99'
             }}>
-              "Dimulai dari perjalanan sederhana,<br />
-              kini menjadi cerita cinta yang indah.<br />
-              Bersama melangkah menuju masa depan yang bahagia."
+              Momen-momen indah yang membentuk cerita cinta kami
             </p>
+          </div>
+
+          {/* Journey Cards */}
+          {journeySteps.map((step, index) => (
+            <div
+              key={index}
+              className="journey-card"
+              style={{
+                margin: "0 1rem",
+                background: 'rgba(165, 124, 197, 0.1)',
+                minWidth: window.innerWidth < 768 ? '350px' : '420px',
+                width: window.innerWidth < 768 ? '350px' : '420px',
+                height: window.innerWidth < 768 ? '520px' : '580px',
+                borderRadius: '1.5rem',
+                position: 'relative',
+                boxShadow: '0 10px 30px rgba(165, 124, 197, 0.3)',
+                cursor: 'pointer',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(165, 124, 197, 0.2)',
+                flexShrink: 0,
+                display: 'flex',
+                flexDirection: 'column'
+              }}
+            >
+              {/* Badge tahun seperti awan */}
+              <div style={{
+                position: 'absolute',
+                top: '-20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: 10,
+                background: '#fff',
+                borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                padding: '10px 18px',
+                boxShadow: '0 6px 20px rgba(165, 124, 197, 0.15), 0 2px 6px rgba(165, 124, 197, 0.1)',
+                border: '1px solid rgba(165, 124, 197, 0.15)',
+                filter: 'drop-shadow(0 2px 4px rgba(165, 124, 197, 0.08))',
+              }}>
+                <span style={{
+                  color: '#a57cc5',
+                  fontWeight: 700,
+                  fontSize: '1.05rem',
+                  fontFamily: 'sans-serif',
+                  letterSpacing: '0.5px',
+                }}>{step.year}</span>
+              </div>
+
+              {/* Image Container */}
+              <div style={{
+                flex: '1 1 55%',
+                padding: window.innerWidth < 768 ? '1.8rem 1.2rem 0.8rem 1.2rem' : '2rem 1.5rem 1rem 1.5rem',
+                display: 'flex',
+                alignItems: 'center'
+              }}>
+                <img
+                  src={step.img}
+                  alt={step.title}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '1rem',
+                    boxShadow: '0 4px 16px rgba(165, 124, 197, 0.2)',
+                    maxHeight: window.innerWidth < 768 ? '260px' : '300px'
+                  }}
+                />
+              </div>
+
+              {/* Text Content */}
+              <div style={{
+                flex: '1 1 45%',
+                padding: window.innerWidth < 768 ? '0.8rem 1.2rem 1.5rem 1.2rem' : '1rem 1.5rem 2rem 1.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                textAlign: 'center',
+                minHeight: 0
+              }}>
+                <h3 style={{
+                  fontFamily: "'Dancing Script', cursive",
+                  fontSize: window.innerWidth < 768 ? '1.8rem' : '2.2rem',
+                  fontWeight: '700',
+                  color: '#a57cc5',
+                  marginBottom: '1rem',
+                  marginTop: '0.3rem',
+                  textShadow: '0 2px 8px rgba(165, 124, 197, 0.3)'
+                }}>
+                  <b>{step.title}</b>
+                </h3>
+                <p style={{
+                  fontSize: window.innerWidth < 768 ? '1rem' : '1.1rem',
+                  color: '#7c5e99',
+                  lineHeight: 1.6,
+                  margin: 0,
+                  overflow: 'hidden',
+                  display: '-webkit-box',
+                  WebkitLineClamp: 5,
+                  WebkitBoxOrient: 'vertical'
+                }}>
+                  {step.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        
+          {/* Quote section */}
+          <div style={{
+            minWidth:"5px",
+            width:"5px",
+            height: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#a57cc5',
+            flexShrink: 0,
+            textAlign: 'center'
+          }}>
+           
           </div>
         </div>
       </div>
