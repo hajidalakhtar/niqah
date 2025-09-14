@@ -10,33 +10,34 @@ if (typeof window !== 'undefined') {
 const LoveJourneySection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const pinWrapRef = useRef<HTMLDivElement>(null);
+  const motorRef = useRef<HTMLDivElement>(null);
 
   const journeySteps = [
     {
       img: '/asset/2022.jpeg',
       title: 'Pertama Bertemu',
-      desc: 'Kota Bandung menjadi saksi bisu pertemuan pertama kami yang begitu berkesan. Setelah hampir 6 bulan saling bertukar cerita dan tawa melalui layar, akhirnya takdir mempertemukan kami dalam kehangatan tatap mata pertama. Detik itu, kami tahu bahwa ini adalah awal dari sebuah cerita cinta yang indah.',
+      desc: 'Kota Bandung menjadi saksi bisu pertemuan pertama kami yang begitu berkesan. Detik itu, kami tahu bahwa ini adalah awal dari sebuah cerita cinta yang indah.',
       icon: '💌',
       year: '2022',
     },
     {
       img: '/asset/2023.jpeg',
       title: 'Momen Bersama',
-      desc: 'Langkah pertama Hajid menuju rumah kami penuh dengan harapan dan kebahagiaan. Dengan hati yang berdebar, ia datang untuk pertama kalinya mengenal keluarga besar yang kelak akan menjadi bagian dari hidupnya. Senyuman hangat dan sambutan penuh cinta dari keluarga menjadi bukti bahwa cinta kami mendapat restu dari orang-orang terkasih.',
+      desc: 'Langkah pertama Hajid menuju rumah Fauji penuh dengan harapan dan kebahagiaan. Senyuman hangat dan sambutan penuh cinta dari keluarga menjadi bukti bahwa cinta kami mendapat restu dari orang-orang terkasih.',
       icon: '💑',
       year: '2023',
     },
     {
       img: '/asset/2024.jpeg',
       title: 'Tumbuh Bersama',
-      desc: 'Tahun ini menjadi momentum istimewa ketika Hajid kembali berkunjung, kali ini ditemani keluarga besarnya. Dengan penuh kerendahan hati dan niat yang sungguh-sungguh, mereka datang untuk menyampaikan keinginan melanjutkan hubungan kami ke jenjang yang lebih serius. Sebuah langkah besar yang penuh makna menuju komitmen yang lebih dalam.',
+      desc: 'Tahun ini menjadi momentum istimewa ketika Hajid kembali berkunjung, kali ini ditemani keluarga besarnya. Sebuah langkah besar yang penuh makna menuju komitmen yang lebih dalam.',
       icon: '🌱',
       year: '2024',
     },
     {
       img: '/asset/2025.jpeg',
       title: 'Menuju Masa Depan',
-      desc: 'Di tahun yang penuh berkah ini, Hajid dengan segenap ketulusan hati dan niat suci untuk beribadah bersama, melamar Fauji dalam sebuah momen yang tak akan pernah terlupakan. Dengan doa restu dari kedua keluarga dan ridho Allah SWT, kami siap melangkah bersama menuju babak baru kehidupan sebagai sepasang suami istri yang saling melengkapi.',
+      desc: 'Di tahun yang penuh berkah ini, Hajid dengan segenap ketulusan hati dan niat suci untuk beribadah bersama, dengan doa restu dari kedua keluarga dan ridho Allah SWT,  kami siap melangkah bersama menuju babak baru.',
       icon: '💍',
       year: '2025',
     }
@@ -84,6 +85,21 @@ const LoveJourneySection: React.FC = () => {
             refreshPriority: -1,
           }
         });
+
+        // Animate motor moving with the scroll
+        const motorElement = motorRef.current;
+        if (motorElement) {
+          gsap.to(motorElement, {
+            x: horizontalScrollLength * 0.2, // Move 30% of the scroll distance for slower movement
+            ease: 'none',
+            scrollTrigger: {
+              trigger: container,
+              start: 'top top',
+              end: () => `+=${horizontalScrollLength}`,
+              scrub: 1,
+            }
+          });
+        }
 
         // Cleanup function
         return () => {
@@ -304,11 +320,11 @@ const LoveJourneySection: React.FC = () => {
               </div>
             </div>
           ))}
-        
+
           {/* Quote section */}
           <div style={{
-            minWidth:"5px",
-            width:"5px",
+            minWidth: "5px",
+            width: "5px",
             height: '100vh',
             display: 'flex',
             alignItems: 'center',
@@ -317,10 +333,46 @@ const LoveJourneySection: React.FC = () => {
             flexShrink: 0,
             textAlign: 'center'
           }}>
-           
+
           </div>
         </div>
+
       </div>
+
+      <div 
+        ref={motorRef}
+        style={{
+        position: 'absolute',
+        bottom: '20px',
+        left: '20px',
+        zIndex: 10,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <img
+          src="/asset/motor.png"
+          alt="Motor"
+          style={{
+            width: window.innerWidth < 768 ? '80px' : '120px',
+            height: 'auto',
+            borderRadius: '0.8rem',
+            filter: 'drop-shadow(0 2px 8px rgba(165, 124, 197, 0.2))',
+            opacity: 0.7,
+            transition: 'all 0.3s ease',
+            cursor: 'pointer'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = '1';
+            e.currentTarget.style.transform = 'scale(1.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = '0.7';
+            e.currentTarget.style.transform = 'scale(1)';
+          }}
+        />
+      </div>
+
     </section>
   );
 };

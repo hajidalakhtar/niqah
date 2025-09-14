@@ -122,7 +122,7 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({ client = 'load' }
 
             <LoveJourneySection />
 
-            <LoveStorySection />
+            {/* <LoveStorySection /> */}
 
 
             <MusicPlayer

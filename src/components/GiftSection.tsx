@@ -117,7 +117,7 @@ const GiftSection: React.FC<GiftSectionProps> = ({ copyToClipboard, handleMouseE
         color: '#7c5e99',
         marginBottom: '1rem'
       }}>
-        a.n. Siti Faujiah Nur Syahid
+        a.n. Siti Faujiyah Nur Syahid
       </div>
 
       <button

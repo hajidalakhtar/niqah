@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface OpeningSectionProps {
@@ -21,7 +21,21 @@ const OpeningSection: React.FC<OpeningSectionProps> = ({
   staggerContainer,
   openingCardVariants,
   fadeUp
-}) => (
+}) => {
+  const [guestName, setGuestName] = useState<string>('Tamu Undangan');
+
+  useEffect(() => {
+    // Get guest name from URL query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const toParam = urlParams.get('to');
+    
+    if (toParam) {
+      // Decode URI component in case the name contains special characters
+      setGuestName(decodeURIComponent(toParam));
+    }
+  }, []);
+
+  return (
   <AnimatePresence>
     {!isOpened && (
       <motion.div
@@ -117,7 +131,7 @@ const OpeningSection: React.FC<OpeningSectionProps> = ({
                 marginBottom: '1.2rem'
               }}
             >
-              Tamu Undangan
+              {guestName}
             </motion.div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <motion.button
@@ -158,6 +172,7 @@ const OpeningSection: React.FC<OpeningSectionProps> = ({
       </motion.div>
     )}
   </AnimatePresence>
-);
+  );
+};
 
 export default OpeningSection;

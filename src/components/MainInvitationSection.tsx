@@ -128,7 +128,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               Keluarga Alm bapak Iman Ahmad Syahid
             </p>
           </div>
-          <div className="and-symbol animate__animated animate__heartBeat animate__infinite " style={{
+          <div className="and-symbol" style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -145,9 +145,9 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
           </div>
           <div className="groom-photo animate__animated animate__slideInRight " style={{
             flex: 1,
+            marginTop: "0px",
             overflow: 'hidden',
             transition: 'transform 0.3s',
-            marginTop: '20px'
           }}>
             <img
               src="/asset/hajid.png"

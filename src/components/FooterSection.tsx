@@ -11,14 +11,7 @@ const FooterSection: React.FC = () => (
     boxSizing: 'border-box'
   }}>
     <div style={{ maxWidth: '400px', margin: '0 auto' }}>
-      {/* Ornamental hearts */}
-      <div className="footer-hearts" style={{ marginBottom: '1rem' }}>
-        <span style={{
-          color: '#a57cc5',
-          fontSize: '1.5rem'
-        }}>♥ ♥ ♥</span>
-      </div>
-
+    
       {/* Thank you message */}
       <div className="footer-message" style={{
         color: '#a57cc5',
@@ -59,12 +52,7 @@ const FooterSection: React.FC = () => (
       </div>
 
       {/* Final ornament */}
-      <div className="footer-ornament" style={{ marginTop: '1rem' }}>
-        <span style={{
-          color: '#a57cc5',
-          fontSize: '1rem'
-        }}>✿ ◈ ✿</span>
-      </div>
+     
     </div>
   </footer>
 );

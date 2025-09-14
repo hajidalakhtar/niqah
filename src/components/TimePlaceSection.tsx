@@ -42,7 +42,7 @@ const TimePlaceSection: React.FC<TimePlaceSectionProps> = ({ fadeUp, handleMouse
     </div>
 
     {/* Google Calendar Info */}
-    <div className="calendar-info animate__animated animate__fadeIn " style={{
+    {/* <div className="calendar-info animate__animated animate__fadeIn " style={{
       marginBottom: '2rem',
       padding: '0.8rem 1.2rem',
       border: '1px dashed #a57cc5',
@@ -57,7 +57,7 @@ const TimePlaceSection: React.FC<TimePlaceSectionProps> = ({ fadeUp, handleMouse
       }}>
         📅 Ingatkan saya melalui google calendar
       </p>
-    </div>
+    </div> */}
 
     {/* Event Details */}
     <div className="event-details animate__animated animate__zoomIn " style={{
