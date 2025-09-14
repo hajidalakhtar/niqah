@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import CountdownTimer from './CountdownTimer';
 
 interface MainCardSectionProps {
   fadeUp: any;
@@ -29,7 +30,6 @@ const MainCardSection: React.FC<MainCardSectionProps> = ({ fadeUp }) => (
       style={{
         borderRadius: '1.5rem',
         overflow: 'hidden',
-        marginBottom: '1.5rem',
         width: '100%',
         aspectRatio: '3/4',
         height: 'auto',
@@ -38,20 +38,24 @@ const MainCardSection: React.FC<MainCardSectionProps> = ({ fadeUp }) => (
       }}
     >
       <img
-        src="/asset/foto_pasangan.jpeg"
+        src="/asset/hero-image.png"
         alt="Pasangan"
         style={{
           position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '80%',
+          height: '80%',
           objectFit: 'cover',
           objectPosition: 'center',
           display: 'block',
-          borderRadius: 0
+          borderRadius: 10
         }}
       />
     </motion.div>
+
+
     {/* Desain undangan tambahan */}
     <div style={{ color: '#a57cc5', textAlign: 'center' }}>
       <motion.div
@@ -83,9 +87,16 @@ const MainCardSection: React.FC<MainCardSectionProps> = ({ fadeUp }) => (
         animate="visible"
         style={{ color: '#a57cc5' }}
       >
-        Rabu, <span style={{ fontStyle: 'italic' }}>31.12.2025</span>
+        Sabtu, <span style={{ fontStyle: 'italic' }}>04.10.2025</span>
       </motion.div>
+      <div style={{ marginTop: '40px' }}>
+        <CountdownTimer />
+      </div>
+
     </div>
+
+
+
   </motion.div>
 );
 

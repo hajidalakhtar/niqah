@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@supabase/supabase-js": "^2.57.4",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "@types/scrollreveal": "^0.0.11",

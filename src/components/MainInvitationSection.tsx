@@ -11,13 +11,11 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
       {/* Line Separator Elegant with framer-motion, improved animation */}
       <div
         className="line-separator"
-        initial="hidden"
-        animate="visible"
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          margin: '3rem auto',
+          margin: '1rem auto',
           maxWidth: '400px',
           width: '100%',
           padding: '0 1.5rem',
@@ -127,7 +125,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Keluarga bapak Iman Ahmad Syahid
+              Keluarga Alm bapak Iman Ahmad Syahid
             </p>
           </div>
           <div className="and-symbol animate__animated animate__heartBeat animate__infinite " style={{
@@ -182,7 +180,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Keluarga bapak Farianda
+              Keluarga Alm  bapak Farianda
             </p>
           </div>
         </div>

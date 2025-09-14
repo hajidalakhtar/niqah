@@ -6,6 +6,7 @@ import TimePlaceSection from './TimePlaceSection';
 import GiftSection from './GiftSection';
 import LoveJourneySection from './LoveJourneySection';
 import LoveStorySection from './LoveStorySection';
+import DoaUcapanSection from './DoaUcapanSection';
 import FooterSection from './FooterSection';
 import MusicPlayer from './MusicPlayer';
 import MainInvitationSection from './MainInvitationSection';
@@ -109,7 +110,6 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({ client = 'load' }
               handleMouseLeave={handleMouseLeave}
               getButtonStyle={getButtonStyle}
             />
-            <LoveJourneySection />
 
             <GiftSection
               copyToClipboard={copyToClipboard}
@@ -117,6 +117,10 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({ client = 'load' }
               handleMouseLeave={handleMouseLeave}
               getButtonStyle={getButtonStyle}
             />
+
+            <DoaUcapanSection />
+
+            <LoveJourneySection />
 
             <LoveStorySection />
 

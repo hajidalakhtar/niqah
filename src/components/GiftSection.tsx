@@ -11,8 +11,8 @@ const GiftSection: React.FC<GiftSectionProps> = ({ copyToClipboard, handleMouseE
   <section className="gift-section animate__animated animate__fadeIn " style={{
     maxWidth: '400px',
     width: '100%',
-    margin: '2rem auto 0 auto',
-    padding: '2rem 1.5rem',
+    margin: '1rem auto 0 auto',
+    padding: '1rem 1.5rem',
     boxSizing: 'border-box',
     textAlign: 'center',
     position: 'relative'
@@ -30,7 +30,7 @@ const GiftSection: React.FC<GiftSectionProps> = ({ copyToClipboard, handleMouseE
         color: '#a57cc5',
         textShadow: '0 2px 4px rgba(165, 124, 197, 0.3)'
       }}>
-        💝 Hadiah
+        Hadiah
       </h2>
       <div style={{
         width: '80px',
@@ -222,6 +222,83 @@ const GiftSection: React.FC<GiftSectionProps> = ({ copyToClipboard, handleMouseE
         })}
       >
         📋 Salin Nomor Rekening
+      </button>
+    </div>
+
+
+
+    {/* Kirim Kado */}
+    <div className="gift-delivery animate__animated animate__slideInRight " style={{
+      marginBottom: '1.5rem',
+      padding: '1.5rem',
+      background: 'linear-gradient(135deg, rgba(165, 124, 197, 0.1), rgba(212, 181, 224, 0.1))',
+      borderRadius: '1.5rem',
+      border: '1px solid rgba(165, 124, 197, 0.2)',
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
+      {/* Decorative corner */}
+      <div style={{
+        position: 'absolute',
+        top: '-10px',
+        right: '-10px',
+        width: '40px',
+        height: '40px',
+        background: 'linear-gradient(135deg, #a57cc5, #d4b5e0)',
+        borderRadius: '50%',
+        opacity: 0.7
+      }}></div>
+
+      <h3 style={{
+        fontFamily: "'Dancing Script', cursive",
+        fontSize: '2rem',
+        fontWeight: 'bold',
+        margin: '0 0 1rem 0',
+        color: '#a57cc5'
+      }}>
+        🎁 Kirim Kado
+      </h3>
+
+      <div style={{
+        fontSize: '1.1rem',
+        fontWeight: 600,
+        marginBottom: '1rem',
+        color: '#7c5e99'
+      }}>
+        Alamat Rumah
+      </div>
+
+      <div style={{
+        fontSize: '1rem',
+        lineHeight: 1.6,
+        marginBottom: '1rem',
+        color: '#a57cc5',
+        background: 'rgba(165, 124, 197, 0.1)',
+        padding: '1rem',
+        borderRadius: '0.8rem',
+        textAlign: 'center'
+      }}>
+
+        Dusun. Binawarga RT 13 RW 04, Desa Kalijati Timur, Kalijati, Subang (Kontrakan Teh Ine)
+      </div>
+
+      <button
+        onClick={() => copyToClipboard('Dusun. Binawarga RT 13 RW 04, Desa Kalijati Timur, Kalijati, Subang (Kontrakan Teh Ine)')}
+        onMouseEnter={() => handleMouseEnter('addressButton')}
+        onMouseLeave={() => handleMouseLeave('addressButton')}
+        style={getButtonStyle('addressButton', {
+          display: 'inline-block',
+          padding: '0.5rem 1rem',
+          background: 'linear-gradient(135deg, #a57cc5, #d4b5e0)',
+          color: 'white',
+          border: 'none',
+          borderRadius: '1rem',
+          fontSize: '0.9rem',
+          fontWeight: 500,
+          cursor: 'pointer'
+        })}
+      >
+        📋 Salin Alamat
       </button>
     </div>
   </section>
