@@ -111,6 +111,9 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({ client = 'load' }
               getButtonStyle={getButtonStyle}
             />
 
+            <LoveJourneySection />
+
+
             <GiftSection
               copyToClipboard={copyToClipboard}
               handleMouseEnter={handleMouseEnter}
@@ -120,9 +123,8 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({ client = 'load' }
 
             <DoaUcapanSection />
 
-            <LoveJourneySection />
 
-            {/* <LoveStorySection /> */}
+            <LoveStorySection />
 
 
             <MusicPlayer
