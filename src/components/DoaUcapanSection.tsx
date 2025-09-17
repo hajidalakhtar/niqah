@@ -304,7 +304,9 @@ const DoaUcapanSection: React.FC = () => {
                             marginBottom: '30px',
                             textAlign: 'center'
                         }}>
-                            Doa & Ucapan dari Teman
+                            Doa & Ucapan
+                            <br />
+                            dari Teman
                         </h3>
 
                         {loading ? (
