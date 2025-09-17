@@ -121,11 +121,11 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               Siti Faujiyah Nur Syahid
             </p>
             <p style={{
-              fontSize: '1.3rem',
+              fontSize: '1rem',
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Keluarga Alm bapak Iman Ahmad Syahid
+              Keluarga Alm bapak Iman Ahmad Syahid & ibu Ani Indrawati
             </p>
           </div>
           <div className="and-symbol" style={{
@@ -176,11 +176,11 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               Muhammad Hajid Al Akhtar
             </p>
             <p style={{
-              fontSize: '1.3rem',
+              fontSize: '1.0rem',
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Keluarga Alm  bapak Farianda
+              Keluarga Alm  bapak Farianda & ibu Nia Kania Salam
             </p>
           </div>
         </div>
