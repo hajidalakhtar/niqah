@@ -45,7 +45,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ showMainContent, isPlaying, a
       id="bg-music"
       ref={audioRef}
       loop
-      src="/public/asset/daylight.mp3"
+      src="https://www.hajidfauji.my.id/asset/daylight.mp3"
       style={{ display: 'none' }}
     />
   </>
