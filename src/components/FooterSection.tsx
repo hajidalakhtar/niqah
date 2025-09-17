@@ -48,7 +48,7 @@ const FooterSection: React.FC = () => (
         fontSize: '0.9rem',
         opacity: 0.8
       }}>
-        04 Agustus 2025
+        04 Oktober 2025
       </div>
 
       {/* Final ornament */}

@@ -45,7 +45,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ showMainContent, isPlaying, a
       id="bg-music"
       ref={audioRef}
       loop
-      src="https://wedding-invitation-guan-vemy.vercel.app/pernikahan-kita.mp3"
+      src="/public/asset/daylight.mp3"
       style={{ display: 'none' }}
     />
   </>

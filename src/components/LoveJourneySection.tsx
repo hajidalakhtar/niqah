@@ -15,7 +15,7 @@ const LoveJourneySection: React.FC = () => {
     {
       img: '/asset/2023.jpeg',
       title: 'Momen Bersama',
-      desc: 'Langkah pertama Hajid menuju rumah Fauji penuh dengan harapan dan kebahagiaan. Senyuman hangat dan sambutan penuh cinta dari keluarga menjadi bukti bahwa cinta kami mendapat restu dari orang-orang terkasih.',
+      desc: 'Langkah pertama Hajid menuju rumah Fauji penuh dengan harapan dan kebahagiaan, mendapat restu dari orang-orang terkasih.',
       icon: '💑',
       year: '2023',
     },
