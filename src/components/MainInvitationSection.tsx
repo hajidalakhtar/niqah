@@ -125,7 +125,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Putri Pertama dari Bapak Iman (Alm) & Ibu Ani
+              Putri Pertama Bapak Iman (Alm) & Ibu Ani
             </p>
           </div>
           <div className="and-symbol" style={{
@@ -180,7 +180,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Putra kedua Bapak Farianda (Alm) & Ibu Nia
+              Putra Kedua Bapak Farianda (Alm) & Ibu Nia
             </p>
           </div>
         </div>
