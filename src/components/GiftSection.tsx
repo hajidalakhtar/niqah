@@ -55,8 +55,8 @@ const GiftSection: React.FC<GiftSectionProps> = ({ copyToClipboard, handleMouseE
         fontStyle: 'italic',
         lineHeight: 1.5
       }}>
-        Doa restu Anda merupakan karunia yang sangat berarti bagi kami.<br />
-        Dan jika memberi adalah ungkapan tanda kasih Anda, kami dengan senang hati menerimanya.
+        Doa restu Anda adalah hadiah terbaik bagi kami.
+        Dan jika berbagi adalah ungkapan tanda kasih bapak/ibu, Kami menerima dengan senang hati segala bentuk hadiah  yang dapat dikirimkan melalui :
       </p>
     </div>
 

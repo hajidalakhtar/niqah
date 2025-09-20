@@ -112,6 +112,29 @@ const TimePlaceSection: React.FC<TimePlaceSectionProps> = ({ fadeUp, handleMouse
         🕐 Pukul 09:00 WIB
       </div>
 
+      <br />
+
+      <h2 style={{
+        fontFamily: "'Dancing Script', cursive",
+        fontSize: '2.5rem',
+        fontWeight: 'bold',
+        margin: '0 0 1rem 0',
+        color: '#a57cc5'
+      }}>
+        Resepsi
+      </h2>
+
+      <div style={{
+        fontSize: '1.3rem',
+        fontWeight: 600,
+        marginBottom: '1rem',
+        color: '#7c5e99',
+        lineHeight: 1.6
+      }}>
+        📅 Sabtu, 4 Oktober 2025<br />
+        🕐 Pukul 09:00 - 14:00 WIB
+      </div>
+
       <div style={{
         fontSize: '1.1rem',
         color: '#a57cc5',

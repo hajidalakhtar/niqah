@@ -74,6 +74,28 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
         }}>
           Assalamualaikum Wr Wb
         </div>
+
+        <blockquote className=" " style={{
+          marginLeft: 0,
+          marginRight: 0,
+          fontSize: '1.15rem',
+          fontStyle: 'italic',
+          borderLeft: '4px solid #a57cc5',
+          paddingLeft: '1rem',
+          background: 'rgba(165, 124, 197, 0.05)',
+          textAlign: 'left',
+          paddingBottom: "10px",
+          paddingTop: "10px"
+        }}>
+          <span style={{ display: 'block', marginBottom: '0.5rem' }}>
+            Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
+          </span>
+          <span style={{ fontWeight: 'bold', color: '#7c5e99', fontSize: '0.95rem' }}>
+            QS Ar-Rum : 21
+          </span>
+        </blockquote>
+
+        
         <div className="invitation-text animate__animated animate__fadeInUp " style={{
           fontSize: '1.15rem',
           marginBottom: '20px'
@@ -121,11 +143,11 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               Siti Faujiyah Nur Syahid
             </p>
             <p style={{
-              fontSize: '1rem',
+              fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Putri Pertama Bapak Iman (Alm) & Ibu Ani
+              Putri Pertama dari Bapak Iman Akhmad Syahid (Alm) & Ibu Ani Indrawati
             </p>
           </div>
           <div className="and-symbol" style={{
@@ -176,11 +198,11 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
               Muhammad Hajid Al Akhtar
             </p>
             <p style={{
-              fontSize: '1.0rem',
+              fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
               color: '#7c5e99',
               marginTop: 0
             }}>
-              Putra Kedua Bapak Farianda (Alm) & Ibu Nia
+              Putra kedua Bapak Farianda (Alm) & Ibu Nia Kania Salam
             </p>
           </div>
         </div>
