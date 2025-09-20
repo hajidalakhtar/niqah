@@ -76,6 +76,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
         </div>
 
         <blockquote className=" " style={{
+          fontFamily: "'Dancing Script', cursive",
           marginLeft: 0,
           marginRight: 0,
           fontSize: '1.15rem',
@@ -95,7 +96,7 @@ const MainInvitationSection: React.FC<MainInvitationSectionProps> = ({ fadeUp })
           </span>
         </blockquote>
 
-        
+
         <div className="invitation-text animate__animated animate__fadeInUp " style={{
           fontSize: '1.15rem',
           marginBottom: '20px'

@@ -132,7 +132,7 @@ const TimePlaceSection: React.FC<TimePlaceSectionProps> = ({ fadeUp, handleMouse
         lineHeight: 1.6
       }}>
         📅 Sabtu, 4 Oktober 2025<br />
-        🕐 Pukul 09:00 - 14:00 WIB
+        🕐 Pukul 10:00 - 14:00 WIB
       </div>
 
       <div style={{

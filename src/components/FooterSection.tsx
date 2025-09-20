@@ -11,8 +11,7 @@ const FooterSection: React.FC = () => (
     boxSizing: 'border-box'
   }}>
     <div style={{ maxWidth: '400px', margin: '0 auto' }}>
-    
-      {/* Thank you message */}
+
       <div className="footer-message" style={{
         color: '#a57cc5',
         fontSize: '1.1rem',
@@ -51,8 +50,6 @@ const FooterSection: React.FC = () => (
         04 Oktober 2025
       </div>
 
-      {/* Final ornament */}
-     
     </div>
   </footer>
 );
