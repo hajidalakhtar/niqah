@@ -38,7 +38,7 @@ const MainCardSection: React.FC<MainCardSectionProps> = ({ fadeUp }) => (
       }}
     >
       <img
-        src="/asset/hero-image.png"
+        src="/asset/hero-image.webp"
         alt="Pasangan"
         style={{
           position: 'absolute',
