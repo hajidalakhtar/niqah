@@ -110,7 +110,7 @@ const DoaUcapanSection: React.FC = () => {
             animate={controls}
             variants={fadeUp}
             style={{
-                maxWidth: '400px',
+                maxWidth: '600px',
                 width: '100%',
                 margin: '1rem auto 0 auto',
                 padding: '1rem 1.5rem',
@@ -120,7 +120,7 @@ const DoaUcapanSection: React.FC = () => {
             }}
 
         >
-            <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <div style={{ maxWidth: '100%', margin: '0 auto' }}>
                 {/* Header */}
                 <div className="gift-title animate__animated animate__bounceIn " style={{
                     marginBottom: '2rem',
@@ -145,21 +145,22 @@ const DoaUcapanSection: React.FC = () => {
                 </div>
 
                 <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '40px'
-                }} className="doa-ucapan-grid">
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '2rem'
+                }} className="doa-ucapan-container">
                     {/* Form Section */}
                     <motion.div
                         variants={fadeUp}
                         style={{
                             background: 'linear-gradient(135deg, rgba(165, 124, 197, 0.1), rgba(212, 181, 224, 0.1))',
-                            padding: '1.5rem',
+                            padding: '2rem',
                             borderRadius: '1.5rem',
                             border: '1px solid rgba(165, 124, 197, 0.2)',
                             height: 'fit-content',
                             position: 'relative',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            marginBottom: '1.5rem'
                         }}
                         className="doa-ucapan-form"
                     >
@@ -287,10 +288,10 @@ const DoaUcapanSection: React.FC = () => {
                         variants={fadeUp}
                         style={{
                             background: 'linear-gradient(135deg, rgba(165, 124, 197, 0.1), rgba(212, 181, 224, 0.1))',
-                            padding: '1.5rem',
+                            padding: '2rem',
                             borderRadius: '1.5rem',
                             border: '1px solid rgba(165, 124, 197, 0.2)',
-                            maxHeight: '600px',
+                            maxHeight: '700px',
                             overflow: 'hidden',
                             position: 'relative'
                         }}
@@ -315,7 +316,7 @@ const DoaUcapanSection: React.FC = () => {
                             </div>
                         ) : (
                             <div style={{
-                                maxHeight: '450px',
+                                maxHeight: '520px',
                                 overflowY: 'auto',
                                 paddingRight: '10px'
                             }}>
@@ -398,7 +399,7 @@ const DoaUcapanSection: React.FC = () => {
                                                     background: 'rgba(139, 75, 124, 0.1)',
                                                     borderRadius: '50%'
                                                 }}></div>
-                                                
+
                                             </motion.div>
                                         ))}
                                     </div>
@@ -410,10 +411,26 @@ const DoaUcapanSection: React.FC = () => {
             </div>
 
             <style>{`
+        /* Desktop Layout - No grid, vertical stack with margins */
+        @media (min-width: 769px) {
+          .doa-ucapan-container {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 2.5rem !important;
+            max-width: 600px !important;
+            margin: 0 auto !important;
+          }
+          
+          .doa-ucapan-form {
+            margin-bottom: 2rem !important;
+          }
+        }
+        
         @media (max-width: 768px) {
-          .doa-ucapan-grid {
-            grid-template-columns: 1fr !important;
-            gap: 30px !important;
+          .doa-ucapan-container {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1.5rem !important;
           }
           
           section h2 {
